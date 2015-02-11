@@ -9,10 +9,8 @@ license=('MIT')
 depends=('python' )
 makedepends=('python3' )
 provides=('futurize' 'pasteurize')
-conflicts=('python-future')
+conflicts=('python2-future')
 source=("https://pypi.python.org/packages/source/f/future/future-$pkgver.tar.gz")
-md5sums=('e94079b0bd1fc054929e8769fc0f6083')
-sha256sums=('62857d51881d97dd5492b9295b9f51d92108a52a4c88e2c40054c1d3e5995be9')
 
 build() {
   cd $srcdir/future-$pkgver
@@ -26,3 +24,6 @@ package() {
   install -D -m644 LICENSE.txt \
 	"$pkgdir/usr/share/licenses/$pkgname/LICENSE.txt"
 }
+
+md5sums=('e94079b0bd1fc054929e8769fc0f6083')
+sha256sums=('62857d51881d97dd5492b9295b9f51d92108a52a4c88e2c40054c1d3e5995be9')
